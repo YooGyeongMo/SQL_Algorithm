@@ -1,0 +1,11 @@
+SELECT MAX(SALARY*MONTHS) AS EARNING , COUNT(*)
+FROM EMPLOYEE
+WHERE SALARY * MONTHS = (SELECT MAX(SALARY * MONTHS)
+                FROM EMPLOYEE);
+
+
+SELECT (months * salary) AS earnings, COUNT(*) 
+FROM employee
+GROUP BY earnings
+ORDER BY earnings DESC
+LIMIT 1
