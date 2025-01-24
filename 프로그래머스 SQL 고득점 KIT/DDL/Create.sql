@@ -11,6 +11,20 @@ SELECT database();
 USE company;
 --출력물,  Database Changed
 
+-- MYSQL 에서는 DATABASE와 스키마가 같은 의미
+-- CREATE DATABASE company = CREATE SCHEMA company 임.
+
+-- postgreSQL에서는 스키마가 DATABASE의 namespace를 의미.
+
+--데이터 베이스 삭제
+DROP DATABASE company;
+
+
+CREATE table DEPARTMENT(
+    id INT PRIMARY KEY,
+    name VARCHAR(20) NOT NULL UNIQUE,
+    leader_id INT
+);
 
 CREATE TABLE EMPLOYEE(
     ID INT PRIMARY KEY,
